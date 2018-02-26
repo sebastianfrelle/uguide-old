@@ -10,8 +10,6 @@ target 'uguide' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'GoogleMaps'
-  pod 'FirebaseUI'
-  pod 'FirebaseUI/Google'
-  pod 'FirebaseUI/Facebook'
+  pod 'GoogleSignIn'
 
 end
