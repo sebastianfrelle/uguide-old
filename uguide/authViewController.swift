@@ -19,14 +19,32 @@ class authViewController: UIViewController, GIDSignInDelegate {
         GIDSignIn.sharedInstance().signIn()
         // Do any additional setup after loading the view, typically from a nib.
         }
-
+    
+    @IBAction func googleLoginBtn(_ sender: GIDSignInButton) {
+        sign(<#T##signIn: GIDSignIn!##GIDSignIn!#>, didSignInFor: <#T##GIDGoogleUser!#>, withError: <#T##Error!#>)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        <#code#>
+        if let error = error {
+            // ...
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let error = error {
+                // ...
+                return
+            }
+        }
     }
 
 }
