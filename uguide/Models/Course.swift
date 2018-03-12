@@ -21,10 +21,12 @@ class Course: Model {
 }
 
 struct CourseLocation {
+    var campus: Campus
     var building: Building
     var room: Room
     
-    init(building: Building, room: Room) {
+    init(campus: Campus, building: Building, room: Room) {
+        self.campus = campus
         self.building = building
         self.room = room
     }

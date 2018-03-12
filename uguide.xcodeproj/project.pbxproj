@@ -23,6 +23,7 @@
 		964521B92056B6E50007A607 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521B82056B6E50007A607 /* Building.swift */; };
 		964521BB2056B7CE0007A607 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521BA2056B7CE0007A607 /* Room.swift */; };
 		964521BE2056BA360007A607 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521BD2056BA360007A607 /* Model.swift */; };
+		964521C62056CAB80007A607 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521C52056CAB80007A607 /* Campus.swift */; };
 		FEE65687285BA36C1D0699E3 /* Pods_uguide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C7A765B3EFA03FF4F8C4F7 /* Pods_uguide.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		964521B82056B6E50007A607 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		964521BA2056B7CE0007A607 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		964521BD2056BA360007A607 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		964521C52056CAB80007A607 /* Campus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
 		FC36C888AA4102F04019BDE8 /* Pods-uguide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uguide.release.xcconfig"; path = "Pods/Target Support Files/Pods-uguide/Pods-uguide.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				964521B62056B2410007A607 /* Beacon.swift */,
 				964521BA2056B7CE0007A607 /* Room.swift */,
 				964521BD2056BA360007A607 /* Model.swift */,
+				964521C52056CAB80007A607 /* Campus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				964521B92056B6E50007A607 /* Building.swift in Sources */,
 				9612363E203AFA7900E4FBEC /* authViewController.swift in Sources */,
 				964521BB2056B7CE0007A607 /* Room.swift in Sources */,
+				964521C62056CAB80007A607 /* Campus.swift in Sources */,
 				964521B52056B15C0007A607 /* Floor.swift in Sources */,
 				9612363C203AFA7900E4FBEC /* AppDelegate.swift in Sources */,
 				8951035120445DE700DD55CF /* User.swift in Sources */,
