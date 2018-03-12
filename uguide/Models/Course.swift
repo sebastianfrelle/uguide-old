@@ -13,7 +13,11 @@ class Course: Model {
     var id: String
     var courseLocation: CourseLocation?
     
-    init(name: String, id: String, courseLocation: CourseLocation? = nil) {
+    init?(name: String, id: String, courseLocation: CourseLocation? = nil) {
+        if name.isEmpty || id.isEmpty {
+            return nil
+        }
+        
         self.name = name
         self.id = id
         self.courseLocation = courseLocation
