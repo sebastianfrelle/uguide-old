@@ -9,13 +9,23 @@
 import Foundation
 
 class Course: Model {
-    var courseName: String
-    var courseID: String
-    var courseLocation: CourseLocation
+    var name: String
+    var id: String
+    var courseLocation: CourseLocation?
     
-    init(courseName: String, courseID: String, courseLocation: CourseLocation) {
-        self.courseName = courseName
-        self.courseID = courseID
+    init(name: String, id: String, courseLocation: CourseLocation? = nil) {
+        self.name = name
+        self.id = id
         self.courseLocation = courseLocation
+    }
+}
+
+struct CourseLocation {
+    var building: Building
+    var room: Room
+    
+    init(building: Building, room: Room) {
+        self.building = building
+        self.room = room
     }
 }

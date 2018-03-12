@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8951035120445DE700DD55CF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951035020445DE700DD55CF /* User.swift */; };
 		895103542044615100DD55CF /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895103532044615100DD55CF /* Course.swift */; };
-		895103562044625E00DD55CF /* CourseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895103552044625E00DD55CF /* CourseLocation.swift */; };
 		9612363C203AFA7900E4FBEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612363B203AFA7900E4FBEC /* AppDelegate.swift */; };
 		9612363E203AFA7900E4FBEC /* authViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612363D203AFA7900E4FBEC /* authViewController.swift */; };
 		96123641203AFA7900E4FBEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9612363F203AFA7900E4FBEC /* Main.storyboard */; };
@@ -42,7 +41,6 @@
 		70C2E0912B9BB46358448219 /* Pods-uguide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uguide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uguide/Pods-uguide.debug.xcconfig"; sourceTree = "<group>"; };
 		8951035020445DE700DD55CF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		895103532044615100DD55CF /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
-		895103552044625E00DD55CF /* CourseLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLocation.swift; sourceTree = "<group>"; };
 		96123638203AFA7900E4FBEC /* uguide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uguide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9612363B203AFA7900E4FBEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9612363D203AFA7900E4FBEC /* authViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 				8951035020445DE700DD55CF /* User.swift */,
 				895103532044615100DD55CF /* Course.swift */,
 				964521B22056B0030007A607 /* University.swift */,
-				895103552044625E00DD55CF /* CourseLocation.swift */,
 				964521B62056B2410007A607 /* Beacon.swift */,
 				964521BA2056B7CE0007A607 /* Room.swift */,
 				964521BD2056BA360007A607 /* Model.swift */,
@@ -336,7 +333,6 @@
 			files = (
 				895103542044615100DD55CF /* Course.swift in Sources */,
 				964521B92056B6E50007A607 /* Building.swift in Sources */,
-				895103562044625E00DD55CF /* CourseLocation.swift in Sources */,
 				9612363E203AFA7900E4FBEC /* authViewController.swift in Sources */,
 				964521BB2056B7CE0007A607 /* Room.swift in Sources */,
 				964521B52056B15C0007A607 /* Floor.swift in Sources */,
