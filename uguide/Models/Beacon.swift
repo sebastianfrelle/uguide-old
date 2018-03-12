@@ -11,15 +11,9 @@ import Foundation
 class Beacon: Model {
     var position: Position
     
-    convenience init(x: Double, y: Double) {
-        let pos = Position(x, y)
-        
-        self.init(position: pos)
-    }
-    
-    init(position: Position) {
-        self.position = position
-    }
+    init(x: Double, y: Double) {
+        self.position = Position(x, y)
+    }    
 }
 
 struct Position {
