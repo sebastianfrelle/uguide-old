@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Building {
+class Building: Model {
     var name: String
     var floors: [Floor]
     

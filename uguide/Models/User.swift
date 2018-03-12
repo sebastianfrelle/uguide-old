@@ -8,7 +8,7 @@
 
 import UIKit
 
-class User {
+class User: Model {
     var name: String
     var courses = [String]()
     

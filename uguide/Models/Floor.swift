@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Floor {
+class Floor: Model {
     var rooms: [Room]
     var beacons: [Beacon]
     

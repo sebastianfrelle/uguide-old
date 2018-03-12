@@ -1,5 +1,5 @@
 //
-//  Room.swift
+//  Model.swift
 //  uguide
 //
 //  Created by Sebastian Frelle Koch on 3/12/18.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Room: Model {
-    var name: String
+class Model {
+    var uid: String
     
-    init(name: String) {
-        self.name = name
+    init() {
+        self.uid = UUID().uuidString
     }
 }

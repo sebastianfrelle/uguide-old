@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CourseLocation {
+class CourseLocation: Model {
     var building: String
     var room: String
     var university: String

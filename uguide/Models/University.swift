@@ -8,15 +8,12 @@
 
 import Foundation
 
-class University {
+class University: Model {
     var name: String
-    
-    var uid: String?
     var courses: [Course]?
     
     init(name: String, courses: [Course] = [Course]()) {
         self.name = name
-//        self.uid = // Generate unique ID (uuid package)
 //        Initialize course array
     }
 }

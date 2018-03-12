@@ -8,19 +8,17 @@
 
 import Foundation
 
-class Beacon {
+class Beacon: Model {
     var position: Position
     
-    var uid: String
-    
     convenience init(x: Double, y: Double) {
-        self.init(position: Position(x, y))
+        let pos = Position(x, y)
+        
+        self.init(position: pos)
     }
     
     init(position: Position) {
         self.position = position
-        
-        self.uid = UUID().uuidString
     }
 }
 

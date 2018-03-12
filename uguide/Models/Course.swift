@@ -8,18 +8,14 @@
 
 import Foundation
 
-class Course {
+class Course: Model {
     var courseName: String
     var courseID: String
     var courseLocation: CourseLocation
-    
-    var uid: String
     
     init(courseName: String, courseID: String, courseLocation: CourseLocation) {
         self.courseName = courseName
         self.courseID = courseID
         self.courseLocation = courseLocation
-        
-        self.uid = UUID().uuidString
     }
 }
