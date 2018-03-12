@@ -18,6 +18,11 @@
 		96123651203AFA7900E4FBEC /* uguideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96123650203AFA7900E4FBEC /* uguideTests.swift */; };
 		9612365E203B0EF400E4FBEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9612365D203B0EF400E4FBEC /* GoogleService-Info.plist */; };
 		9612365F203B0EF400E4FBEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9612365D203B0EF400E4FBEC /* GoogleService-Info.plist */; };
+		964521B32056B0030007A607 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521B22056B0030007A607 /* University.swift */; };
+		964521B52056B15C0007A607 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521B42056B15C0007A607 /* Floor.swift */; };
+		964521B72056B2410007A607 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521B62056B2410007A607 /* Beacon.swift */; };
+		964521B92056B6E50007A607 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521B82056B6E50007A607 /* Building.swift */; };
+		964521BB2056B7CE0007A607 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521BA2056B7CE0007A607 /* Room.swift */; };
 		FEE65687285BA36C1D0699E3 /* Pods_uguide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C7A765B3EFA03FF4F8C4F7 /* Pods_uguide.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +53,11 @@
 		96123650203AFA7900E4FBEC /* uguideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uguideTests.swift; sourceTree = "<group>"; };
 		96123652203AFA7900E4FBEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9612365D203B0EF400E4FBEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		964521B22056B0030007A607 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		964521B42056B15C0007A607 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		964521B62056B2410007A607 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		964521B82056B6E50007A607 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		964521BA2056B7CE0007A607 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		FC36C888AA4102F04019BDE8 /* Pods-uguide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uguide.release.xcconfig"; path = "Pods/Target Support Files/Pods-uguide/Pods-uguide.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,9 +100,14 @@
 		895103522044612200DD55CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				964521B42056B15C0007A607 /* Floor.swift */,
+				964521B82056B6E50007A607 /* Building.swift */,
 				8951035020445DE700DD55CF /* User.swift */,
 				895103532044615100DD55CF /* Course.swift */,
+				964521B22056B0030007A607 /* University.swift */,
 				895103552044625E00DD55CF /* CourseLocation.swift */,
+				964521B62056B2410007A607 /* Beacon.swift */,
+				964521BA2056B7CE0007A607 /* Room.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,10 +332,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				895103542044615100DD55CF /* Course.swift in Sources */,
+				964521B92056B6E50007A607 /* Building.swift in Sources */,
 				895103562044625E00DD55CF /* CourseLocation.swift in Sources */,
 				9612363E203AFA7900E4FBEC /* authViewController.swift in Sources */,
+				964521BB2056B7CE0007A607 /* Room.swift in Sources */,
+				964521B52056B15C0007A607 /* Floor.swift in Sources */,
 				9612363C203AFA7900E4FBEC /* AppDelegate.swift in Sources */,
 				8951035120445DE700DD55CF /* User.swift in Sources */,
+				964521B32056B0030007A607 /* University.swift in Sources */,
+				964521B72056B2410007A607 /* Beacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

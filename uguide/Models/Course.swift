@@ -6,17 +6,20 @@
 //  Copyright © 2018 Sebastian Frelle Koch. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class Course {
     var courseName: String
-    var courseID: Int
+    var courseID: String
     var courseLocation: CourseLocation
     
-    init(courseName: String, courseID: Int, courseLocation: CourseLocation) {
+    var uid: String
+    
+    init(courseName: String, courseID: String, courseLocation: CourseLocation) {
         self.courseName = courseName
         self.courseID = courseID
         self.courseLocation = courseLocation
+        
+        self.uid = UUID().uuidString
     }
-    
 }
