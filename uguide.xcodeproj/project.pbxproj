@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8951035120445DE700DD55CF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951035020445DE700DD55CF /* User.swift */; };
+		895103542044615100DD55CF /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895103532044615100DD55CF /* Course.swift */; };
+		895103562044625E00DD55CF /* CourseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895103552044625E00DD55CF /* CourseLocation.swift */; };
 		9612363C203AFA7900E4FBEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612363B203AFA7900E4FBEC /* AppDelegate.swift */; };
 		9612363E203AFA7900E4FBEC /* authViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612363D203AFA7900E4FBEC /* authViewController.swift */; };
 		96123641203AFA7900E4FBEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9612363F203AFA7900E4FBEC /* Main.storyboard */; };
@@ -31,6 +34,9 @@
 /* Begin PBXFileReference section */
 		02C7A765B3EFA03FF4F8C4F7 /* Pods_uguide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uguide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70C2E0912B9BB46358448219 /* Pods-uguide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uguide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uguide/Pods-uguide.debug.xcconfig"; sourceTree = "<group>"; };
+		8951035020445DE700DD55CF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		895103532044615100DD55CF /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		895103552044625E00DD55CF /* CourseLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLocation.swift; sourceTree = "<group>"; };
 		96123638203AFA7900E4FBEC /* uguide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uguide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9612363B203AFA7900E4FBEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9612363D203AFA7900E4FBEC /* authViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +87,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		895103522044612200DD55CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8951035020445DE700DD55CF /* User.swift */,
+				895103532044615100DD55CF /* Course.swift */,
+				895103552044625E00DD55CF /* CourseLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9612362F203AFA7900E4FBEC = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +127,7 @@
 				96123644203AFA7900E4FBEC /* LaunchScreen.storyboard */,
 				96123647203AFA7900E4FBEC /* Info.plist */,
 				9612365D203B0EF400E4FBEC /* GoogleService-Info.plist */,
+				895103522044612200DD55CF /* Models */,
 			);
 			path = uguide;
 			sourceTree = "<group>";
@@ -299,8 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895103542044615100DD55CF /* Course.swift in Sources */,
+				895103562044625E00DD55CF /* CourseLocation.swift in Sources */,
 				9612363E203AFA7900E4FBEC /* authViewController.swift in Sources */,
 				9612363C203AFA7900E4FBEC /* AppDelegate.swift in Sources */,
+				8951035120445DE700DD55CF /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

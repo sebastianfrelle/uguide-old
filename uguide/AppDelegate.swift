@@ -61,21 +61,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            // ...
-            return
-        }
-        
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                       accessToken: authentication.accessToken)
-        Auth.auth().signIn(with: credential) { (user, error) in
             if let error = error {
-                // ...
+                print("Failed to log into Google", error)
                 return
             }
-            // User is signed in
-            // ...
+            print("Succesfully logged into Google", user)
+            guard let authentication = user.authentication else { return }
+            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+            Auth.auth().signIn(with: credential) { (user, error) in
+                if let error = error {
+                    print("Failed to create a Firebase User with Google account", error)
+                    return
+                }
+                guard let uid = user?.uid else { return }
+                print("Succesfully logged into Firebase with Google", uid)
         }
     }
     
