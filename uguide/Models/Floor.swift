@@ -10,10 +10,8 @@ import Foundation
 
 class Floor: Model {
     var rooms: [Room]
-    var beacons: [Beacon]
     
-    init(rooms: [Room] = [Room](), beacons: [Beacon] = [Beacon]()) {
+    init(rooms: [Room] = [Room]()) {
         self.rooms = rooms
-        self.beacons = beacons
     }
 }

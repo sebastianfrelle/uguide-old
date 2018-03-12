@@ -10,8 +10,10 @@ import Foundation
 
 class Room: Model {
     var name: String
+    var beacons: [Beacon]
     
-    init(name: String) {
+    init(name: String, beacons: [Beacon] = [Beacon]()) {
         self.name = name
+        self.beacons = beacons
     }
 }
