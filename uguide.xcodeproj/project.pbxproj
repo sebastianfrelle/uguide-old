@@ -14,7 +14,6 @@
 		96123641203AFA7900E4FBEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9612363F203AFA7900E4FBEC /* Main.storyboard */; };
 		96123643203AFA7900E4FBEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96123642203AFA7900E4FBEC /* Assets.xcassets */; };
 		96123646203AFA7900E4FBEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96123644203AFA7900E4FBEC /* LaunchScreen.storyboard */; };
-		96123651203AFA7900E4FBEC /* uguideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96123650203AFA7900E4FBEC /* uguideTests.swift */; };
 		9612365E203B0EF400E4FBEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9612365D203B0EF400E4FBEC /* GoogleService-Info.plist */; };
 		9612365F203B0EF400E4FBEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9612365D203B0EF400E4FBEC /* GoogleService-Info.plist */; };
 		964521B32056B0030007A607 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521B22056B0030007A607 /* University.swift */; };
@@ -27,6 +26,7 @@
 		964521C82056D1930007A607 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521C72056D1930007A607 /* CourseTableViewCell.swift */; };
 		964521CC2056D5CD0007A607 /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521CB2056D5CD0007A607 /* CourseTableViewController.swift */; };
 		965F29A7205FB67800691CC4 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F29A6205FB67800691CC4 /* CourseDetailsViewController.swift */; };
+		9681B393205FC7CF00682D53 /* GPSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681B392205FC7CF00682D53 /* GPSMapViewController.swift */; };
 		FEE65687285BA36C1D0699E3 /* Pods_uguide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C7A765B3EFA03FF4F8C4F7 /* Pods_uguide.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +53,6 @@
 		96123645203AFA7900E4FBEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96123647203AFA7900E4FBEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9612364C203AFA7900E4FBEC /* uguideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uguideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		96123650203AFA7900E4FBEC /* uguideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uguideTests.swift; sourceTree = "<group>"; };
-		96123652203AFA7900E4FBEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9612365D203B0EF400E4FBEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		964521B22056B0030007A607 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		964521B42056B15C0007A607 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
@@ -66,6 +64,7 @@
 		964521C72056D1930007A607 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		964521CB2056D5CD0007A607 /* CourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
 		965F29A6205FB67800691CC4 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
+		9681B392205FC7CF00682D53 /* GPSMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSMapViewController.swift; sourceTree = "<group>"; };
 		FC36C888AA4102F04019BDE8 /* Pods-uguide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uguide.release.xcconfig"; path = "Pods/Target Support Files/Pods-uguide/Pods-uguide.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +127,6 @@
 				455A22467EE951DE8846D3A2 /* Pods */,
 				96123639203AFA7900E4FBEC /* Products */,
 				9612363A203AFA7900E4FBEC /* uguide */,
-				9612364F203AFA7900E4FBEC /* uguideTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,18 +155,10 @@
 			path = uguide;
 			sourceTree = "<group>";
 		};
-		9612364F203AFA7900E4FBEC /* uguideTests */ = {
-			isa = PBXGroup;
-			children = (
-				96123650203AFA7900E4FBEC /* uguideTests.swift */,
-				96123652203AFA7900E4FBEC /* Info.plist */,
-			);
-			path = uguideTests;
-			sourceTree = "<group>";
-		};
 		964521C92056D1BC0007A607 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9681B391205FC7C100682D53 /* Navigation */,
 				964521CA2056D21A0007A607 /* Courses */,
 			);
 			path = Views;
@@ -182,6 +172,14 @@
 				965F29A6205FB67800691CC4 /* CourseDetailsViewController.swift */,
 			);
 			path = Courses;
+			sourceTree = "<group>";
+		};
+		9681B391205FC7C100682D53 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				9681B392205FC7CF00682D53 /* GPSMapViewController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +369,7 @@
 				964521CC2056D5CD0007A607 /* CourseTableViewController.swift in Sources */,
 				964521B52056B15C0007A607 /* Floor.swift in Sources */,
 				9612363C203AFA7900E4FBEC /* AppDelegate.swift in Sources */,
+				9681B393205FC7CF00682D53 /* GPSMapViewController.swift in Sources */,
 				8951035120445DE700DD55CF /* User.swift in Sources */,
 				964521BE2056BA360007A607 /* Model.swift in Sources */,
 				964521B32056B0030007A607 /* University.swift in Sources */,
@@ -382,7 +381,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96123651203AFA7900E4FBEC /* uguideTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
