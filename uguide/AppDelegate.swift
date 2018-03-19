@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GMSServices.provideAPIKey(GMSAPIKey)
         GMSPlacesClient.provideAPIKey(GMSAPIKey)
         
+        ThemeManager.applyTheme(theme: .theme1)
+        
         return true
     }
 

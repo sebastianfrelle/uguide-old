@@ -11,9 +11,11 @@ import Firebase
 import GoogleSignIn
 
 class authViewController: UIViewController, GIDSignInUIDelegate {
-
+    let theme = ThemeManager.currentTheme()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = theme.backgroundColor
         setUpCustomButtons()
         
         if Auth.auth().currentUser != nil {
@@ -23,6 +25,7 @@ class authViewController: UIViewController, GIDSignInUIDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         }
+    
     func setUpCustomButtons() {
         let googleButton = GIDSignInButton()
         googleButton.frame = CGRect(x: 16, y:116, width: view.frame.width-32, height: 50)
