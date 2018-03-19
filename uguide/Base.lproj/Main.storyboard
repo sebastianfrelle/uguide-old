@@ -36,6 +36,64 @@
             </objects>
             <point key="canvasLocation" x="-802" y="115"/>
         </scene>
+        <!--Course Details Table View Controller-->
+        <scene sceneID="Krl-NS-lQz">
+            <objects>
+                <tableViewController id="hkQ-QL-NrI" customClass="CourseDetailsTableViewController" customModule="uguide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sx8-xN-7QW" customClass="Course" customModule="uguide" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kr4-VL-c4J" userLabel="NavButton">
+                            <rect key="frame" x="0.0" y="118" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Take me there!"/>
+                            <connections>
+                                <segue destination="0FN-LW-IIL" kind="show" id="lN1-b3-oUe"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoursePropertyCell" rowHeight="90" id="H1Y-kF-MIB" customClass="CourseDetailsTableViewCell" customModule="uguide" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H1Y-kF-MIB" id="GlL-0B-fMt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Property Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paH-aO-tya">
+                                            <rect key="frame" x="16" y="11" width="116" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Property Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omq-AO-0fQ">
+                                            <rect key="frame" x="16" y="58" width="113" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="paH-aO-tya" id="F4G-wP-pF5"/>
+                                    <outlet property="propertyName" destination="paH-aO-tya" id="S7w-hn-luE"/>
+                                    <outlet property="propertyValue" destination="Omq-AO-0fQ" id="iF4-W1-XRj"/>
+                                    <outlet property="value" destination="Omq-AO-0fQ" id="jOa-rh-Hh0"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hkQ-QL-NrI" id="Px6-mq-DIA"/>
+                            <outlet property="delegate" destination="hkQ-QL-NrI" id="t5s-n3-oHG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XRe-2M-BMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="842"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="Tct-vg-tjj">
             <objects>
@@ -65,31 +123,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVR-u6-ZKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2410" y="842"/>
-        </scene>
-        <!--Specific Course-->
-        <scene sceneID="uzR-6T-2vo">
-            <objects>
-                <viewController title="Specific Course" id="Qwj-Vp-7Jc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gng-rC-QuP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbt-ZT-lLh">
-                                <rect key="frame" x="130" y="617" width="115" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take Me There!"/>
-                                <connections>
-                                    <segue destination="0FN-LW-IIL" kind="show" id="wfp-Gn-XXW"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="3yd-aS-RRq"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ReU-IH-Jd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="832.79999999999995" y="841.52923538230891"/>
         </scene>
         <!--Your Courses-->
         <scene sceneID="8sI-xU-4gS">
@@ -126,7 +159,7 @@
                                 <connections>
                                     <outlet property="courseIdLabel" destination="dBX-AC-YTo" id="QSg-Yj-DnJ"/>
                                     <outlet property="courseNameLabel" destination="mVY-CC-sqz" id="OgQ-LD-20U"/>
-                                    <segue destination="Qwj-Vp-7Jc" kind="show" id="hJi-SB-Vfo"/>
+                                    <segue destination="hkQ-QL-NrI" kind="show" identifier="ShowDetail" id="Izs-r0-nlp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -217,7 +250,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9OG-pr-qAQ"/>
-        <segue reference="Mgc-vl-SH7"/>
+        <segue reference="d4s-wB-0us"/>
     </inferredMetricsTieBreakers>
 </document>

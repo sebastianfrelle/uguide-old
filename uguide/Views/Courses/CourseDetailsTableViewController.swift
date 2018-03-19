@@ -10,8 +10,20 @@ import UIKit
 
 class CourseDetailsTableViewController: UITableViewController {
     
+    var course: Course! = nil
+    var courseDetails: [CourseProperty]! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if course == nil {
+            fatalError("Course was not set")
+        }
+        
+        courseDetails = [
+            CourseProperty(title: "Course name", value: course.name),
+            CourseProperty(title: "Course ID", value: course.id),
+        ]
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,14 +44,20 @@ class CourseDetailsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return courseDetails.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cellIdentifier = "CoursePropertyCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CourseDetailsTableViewCell else {
+            fatalError("The dequeued cell is not an instance of CourseDetailsTableViewCell.")
+        }
+        
         // Configure the cell...
+        let property = courseDetails[indexPath.row]
+        
+        cell.name.text = property.title
+        cell.value.text = property.value
 
         return cell
     }
@@ -89,4 +107,9 @@ class CourseDetailsTableViewController: UITableViewController {
     }
     */
 
+}
+
+struct CourseProperty {
+    var title: String
+    var value: String
 }

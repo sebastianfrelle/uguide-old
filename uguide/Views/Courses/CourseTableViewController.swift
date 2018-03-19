@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class CourseTableViewController: UITableViewController {
     
@@ -71,7 +72,7 @@ class CourseTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
@@ -90,9 +91,35 @@ class CourseTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch (segue.identifier ?? "") {
+        case "ShowDetail":
+            os_log("Navigating to course details view...")
+            
+            guard let courseDetailsViewController = segue.destination as? CourseDetailsTableViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedCourseCell = sender as? CourseTableViewCell else {
+                fatalError("Unexpected sender: \(sender!)")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedCourseCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedCourse = courses[indexPath.row]
+            courseDetailsViewController.course = selectedCourse
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier!)")
+        }
+    }
 
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -104,8 +131,8 @@ class CourseTableViewController: UITableViewController {
     private func loadCourses() {
         let courses = [
             Course(name: "Machine Learning", id: "02450"),
-            Course(name: "Graph Theory",     id: "01227"),
-            Course(name: "iOS Development",  id: "62417")
+            Course(name: "Graph Theory", id: "01227"),
+            Course(name: "iOS Development", id: "62417")
         ]
         
         for c in courses {
