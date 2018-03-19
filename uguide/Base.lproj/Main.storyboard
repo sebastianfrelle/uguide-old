@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0FN-LW-IIL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,22 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="zfh-WJ-D1W">
-            <objects>
-                <navigationController id="mdL-hc-f9V" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FUV-so-t8F">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ck7-Lq-Wf4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fH4-AX-1FL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1501" y="115"/>
-        </scene>
         <!--UGuide Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -39,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="User Profile"/>
                                 <connections>
-                                    <segue destination="hij-lS-1tt" kind="show" id="8sv-Zf-Ygs"/>
+                                    <segue destination="BFc-SE-ipp" kind="show" id="pBL-lP-Op3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,13 +31,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="UGuide Login" id="I5s-NI-Eyq"/>
-                    <connections>
-                        <segue destination="hij-lS-1tt" kind="show" id="Xtj-32-q1K"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-551.20000000000005" y="114.69265367316342"/>
+            <point key="canvasLocation" x="-802" y="115"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Tct-vg-tjj">
@@ -68,24 +49,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMf-2U-lu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217" y="854"/>
+            <point key="canvasLocation" x="1613.5999999999999" y="841.52923538230891"/>
         </scene>
-        <!--User Profile-->
-        <scene sceneID="jHR-8t-Vpe">
+        <!--IBeacon Map-->
+        <scene sceneID="NQ2-Y0-wb4">
             <objects>
-                <viewController title="User Profile" id="hij-lS-1tt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="k3V-lG-jx3">
+                <viewController title="IBeacon Map" id="zto-df-mi3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uh2-EU-EHh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="eJd-ad-GBM"/>
+                        <viewLayoutGuide key="safeArea" id="yNn-D3-Hvc"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TNu-wv-4JH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVR-u6-ZKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="115"/>
+            <point key="canvasLocation" x="2410" y="842"/>
         </scene>
-        <!--Course Table View Controller-->
+        <!--Specific Course-->
+        <scene sceneID="uzR-6T-2vo">
+            <objects>
+                <viewController title="Specific Course" id="Qwj-Vp-7Jc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gng-rC-QuP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbt-ZT-lLh">
+                                <rect key="frame" x="130" y="617" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Me There!"/>
+                                <connections>
+                                    <segue destination="0FN-LW-IIL" kind="show" id="wfp-Gn-XXW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3yd-aS-RRq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReU-IH-Jd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832.79999999999995" y="841.52923538230891"/>
+        </scene>
+        <!--Your Courses-->
         <scene sceneID="8sI-xU-4gS">
             <objects>
                 <tableViewController id="loD-VU-QTg" customClass="CourseTableViewController" customModule="uguide" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,6 +126,7 @@
                                 <connections>
                                     <outlet property="courseIdLabel" destination="dBX-AC-YTo" id="QSg-Yj-DnJ"/>
                                     <outlet property="courseNameLabel" destination="mVY-CC-sqz" id="OgQ-LD-20U"/>
+                                    <segue destination="Qwj-Vp-7Jc" kind="show" id="hJi-SB-Vfo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -128,13 +135,89 @@
                             <outlet property="delegate" destination="loD-VU-QTg" id="ubI-EW-VXF"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Courses" id="oTn-P9-ffb">
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="5WB-ju-v1i">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="X1l-hX-gdj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8N7-2X-g5d">
+                            <connections>
+                                <segue destination="VQE-SP-dDi" kind="presentation" identifier="AddCourse" id="9OG-pr-qAQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kB-Iw-3ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="115"/>
+            <point key="canvasLocation" x="834" y="115"/>
+        </scene>
+        <!--Add Course-->
+        <scene sceneID="eDb-oO-PH5">
+            <objects>
+                <viewController title="Add Course" id="rSJ-VZ-M9w" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aoa-ig-3Rz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MJI-64-jh5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Course" id="Xx3-OQ-iWe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dPZ-GD-xhe">
+                            <connections>
+                                <segue destination="loD-VU-QTg" kind="show" id="Mgc-vl-SH7"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Jq1-8L-IFc">
+                            <connections>
+                                <segue destination="loD-VU-QTg" kind="show" id="Phk-B8-laU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t65-hF-Sv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2338" y="114"/>
+        </scene>
+        <!--Navigation Bar User Courses-->
+        <scene sceneID="Gxy-Dk-HRn">
+            <objects>
+                <navigationController title="Navigation Bar User Courses" automaticallyAdjustsScrollViewInsets="NO" id="BFc-SE-ipp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BJn-3S-W60">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="loD-VU-QTg" kind="relationship" relationship="rootViewController" id="d4s-wB-0us"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9O2-6I-AeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="115"/>
+        </scene>
+        <!--Navigation Bar Add Course-->
+        <scene sceneID="jG2-Y0-Ncm">
+            <objects>
+                <navigationController title="Navigation Bar Add Course" automaticallyAdjustsScrollViewInsets="NO" id="VQE-SP-dDi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PQ6-UC-nRg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rSJ-VZ-M9w" kind="relationship" relationship="rootViewController" id="N5l-ff-nNi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngd-FL-A0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1612.8" y="114.24287856071965"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8sv-Zf-Ygs"/>
+        <segue reference="9OG-pr-qAQ"/>
+        <segue reference="Mgc-vl-SH7"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,7 +17,6 @@ class authViewController: UIViewController, GIDSignInUIDelegate {
         setUpCustomButtons()
         
         if Auth.auth().currentUser != nil {
-            
         }
         
         GIDSignIn.sharedInstance().uiDelegate = self
