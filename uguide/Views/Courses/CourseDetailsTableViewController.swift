@@ -1,24 +1,29 @@
 //
-//  CourseTableViewController.swift
+//  CourseDetailsTableViewController.swift
 //  uguide
 //
-//  Created by Sebastian Frelle Koch on 3/12/18.
+//  Created by Sebastian Frelle Koch on 3/19/18.
 //  Copyright © 2018 Sebastian Frelle Koch. All rights reserved.
 //
 
 import UIKit
-import os.log
 
-class CourseTableViewController: UITableViewController {
+class CourseDetailsTableViewController: UITableViewController {
     
-    //MARK: Properties
-    var courses = [Course]()
-
+    var course: Course! = nil
+    var courseDetails: [CourseProperty]! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load the sample data
-        loadCourses()
+        if course == nil {
+            fatalError("Course was not set")
+        }
+        
+        courseDetails = [
+            CourseProperty(title: "Course name", value: course.name),
+            CourseProperty(title: "Course ID", value: course.id),
+        ]
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,29 +38,30 @@ class CourseTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return courses.count
+        return courseDetails.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "CourseTableViewCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CourseTableViewCell else {
-            fatalError("The dequeued cell is not an instance of CourseTableViewCell.")
+        let cellIdentifier = "CoursePropertyCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CourseDetailsTableViewCell else {
+            fatalError("The dequeued cell is not an instance of CourseDetailsTableViewCell.")
         }
         
-        // Fetches the appropriate meal for the data source layout
-        let course = courses[indexPath.row]
+        // Configure the cell...
+        let property = courseDetails[indexPath.row]
         
-        cell.courseNameLabel.text = course.name
-        cell.courseIdLabel.text = course.id
-        
+        cell.name.text = property.title
+        cell.value.text = property.value
+
         return cell
     }
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -72,7 +78,7 @@ class CourseTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        }    
     }
     */
 
@@ -91,56 +97,19 @@ class CourseTableViewController: UITableViewController {
     }
     */
 
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        
-        switch (segue.identifier ?? "") {
-        case "ShowDetail":
-            os_log("Navigating to course details view...")
-            
-            guard let courseDetailsViewController = segue.destination as? CourseDetailsTableViewController else {
-                fatalError("Unexpected destination: \(segue.destination)")
-            }
-            
-            guard let selectedCourseCell = sender as? CourseTableViewCell else {
-                fatalError("Unexpected sender: \(sender!)")
-            }
-            
-            guard let indexPath = tableView.indexPath(for: selectedCourseCell) else {
-                fatalError("The selected cell is not being displayed by the table")
-            }
-            
-            let selectedCourse = courses[indexPath.row]
-            courseDetailsViewController.course = selectedCourse
-        default:
-            fatalError("Unexpected Segue Identifier; \(segue.identifier!)")
-        }
-    }
-
     /*
+    // MARK: - Navigation
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     */
-    
-    //MARK: Private Methods
-    private func loadCourses() {
-        let courses = [
-            Course(name: "Machine Learning", id: "02450"),
-            Course(name: "Graph Theory", id: "01227"),
-            Course(name: "iOS Development", id: "62417")
-        ]
-        
-        for c in courses {
-            guard c != nil else {
-                fatalError("Failed to initialize a course")
-            }
-            
-            self.courses.append(c!)
-        }
-    }
+
+}
+
+struct CourseProperty {
+    var title: String
+    var value: String
 }

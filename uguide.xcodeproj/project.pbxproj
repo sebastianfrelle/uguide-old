@@ -36,8 +36,9 @@
 		964521C62056CAB80007A607 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521C52056CAB80007A607 /* Campus.swift */; };
 		964521C82056D1930007A607 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521C72056D1930007A607 /* CourseTableViewCell.swift */; };
 		964521CC2056D5CD0007A607 /* CourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964521CB2056D5CD0007A607 /* CourseTableViewController.swift */; };
-		965F29A7205FB67800691CC4 /* CourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F29A6205FB67800691CC4 /* CourseDetailsViewController.swift */; };
 		9681B393205FC7CF00682D53 /* GPSMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681B392205FC7CF00682D53 /* GPSMapViewController.swift */; };
+		9681B397205FE65700682D53 /* CourseDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681B396205FE65700682D53 /* CourseDetailsTableViewController.swift */; };
+		9681B399205FEC3200682D53 /* CourseDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681B398205FEC3200682D53 /* CourseDetailsTableViewCell.swift */; };
 		FEE65687285BA36C1D0699E3 /* Pods_uguide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C7A765B3EFA03FF4F8C4F7 /* Pods_uguide.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,8 +86,9 @@
 		964521C52056CAB80007A607 /* Campus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
 		964521C72056D1930007A607 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		964521CB2056D5CD0007A607 /* CourseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewController.swift; sourceTree = "<group>"; };
-		965F29A6205FB67800691CC4 /* CourseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsViewController.swift; sourceTree = "<group>"; };
 		9681B392205FC7CF00682D53 /* GPSMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSMapViewController.swift; sourceTree = "<group>"; };
+		9681B396205FE65700682D53 /* CourseDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsTableViewController.swift; sourceTree = "<group>"; };
+		9681B398205FEC3200682D53 /* CourseDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		FC36C888AA4102F04019BDE8 /* Pods-uguide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uguide.release.xcconfig"; path = "Pods/Target Support Files/Pods-uguide/Pods-uguide.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,7 +220,8 @@
 			children = (
 				964521C72056D1930007A607 /* CourseTableViewCell.swift */,
 				964521CB2056D5CD0007A607 /* CourseTableViewController.swift */,
-				965F29A6205FB67800691CC4 /* CourseDetailsViewController.swift */,
+				9681B396205FE65700682D53 /* CourseDetailsTableViewController.swift */,
+				9681B398205FEC3200682D53 /* CourseDetailsTableViewCell.swift */,
 			);
 			path = Courses;
 			sourceTree = "<group>";
@@ -422,12 +425,13 @@
 				895103542044615100DD55CF /* Course.swift in Sources */,
 				964521B92056B6E50007A607 /* Building.swift in Sources */,
 				9612363E203AFA7900E4FBEC /* authViewController.swift in Sources */,
-				965F29A7205FB67800691CC4 /* CourseDetailsViewController.swift in Sources */,
 				964521BB2056B7CE0007A607 /* Room.swift in Sources */,
 				964521C62056CAB80007A607 /* Campus.swift in Sources */,
+				9681B397205FE65700682D53 /* CourseDetailsTableViewController.swift in Sources */,
 				964521CC2056D5CD0007A607 /* CourseTableViewController.swift in Sources */,
 				964521B52056B15C0007A607 /* Floor.swift in Sources */,
 				9612363C203AFA7900E4FBEC /* AppDelegate.swift in Sources */,
+				9681B399205FEC3200682D53 /* CourseDetailsTableViewCell.swift in Sources */,
 				9681B393205FC7CF00682D53 /* GPSMapViewController.swift in Sources */,
 				89AE5E78205FEFBC00E277B2 /* ThemeManager.swift in Sources */,
 				8951035120445DE700DD55CF /* User.swift in Sources */,
